@@ -1,8 +1,6 @@
 import { ThemeProvider } from "components/material-tailwind-theme-provider";
 import RecoilProvider from "config/RecoilProvider";
-import MainLayout from "components/layouts/main-layout";
 import ReactQueryClientProviders from "config/ReactQueryClientProvider";
-import Auth from "components/auth";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -15,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
   const loggedIn = false;
 
   return (
@@ -34,7 +31,7 @@ export default function RootLayout({ children }) {
               />
             </head>
             <body className={inter.className}>
-              {loggedIn ? <MainLayout>{children}</MainLayout> : <Auth />}
+              <div>aa</div>
             </body>
           </html>
         </ThemeProvider>
